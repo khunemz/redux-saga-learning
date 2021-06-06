@@ -6,7 +6,7 @@ export const Users = () => {
   const dispatch = useDispatch()
   const users = useSelector(state => state.users.users)
   useEffect(() => {
-    dispatch(getUsers([
+    const users =[
       {
         id: 1,
         name: 'chutipong roobklom',
@@ -15,7 +15,8 @@ export const Users = () => {
           catchPhrase: 'Do the right thing'
         }
       }
-    ]))
+    ];
+    dispatch(getUsers(users))
   }, [])
   return (
     <>
